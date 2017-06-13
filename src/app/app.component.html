@@ -1,0 +1,30 @@
+<h4>Application:</h4>
+<ul>
+    <li><a routerLink="/">Website</a></li>
+    <li><a routerLink="/security">Security</a></li>
+</ul>
+<div>
+    <h5>Making Sure MaterialCss is working.</h5>
+    <form materialize class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <h5>Redux demo:</h5>
+    <p>
+        <span>appCount = {{ appCount$ | async }} | </span>
+        <span>securityCount = {{ securityCount$ | async }} | </span>
+        <span>websiteCount = {{ websiteCount$ | async }} </span>
+    </p>
+    <p>
+        Incrementing App count:
+        <button class="waves-effect waves-light btn" (click)="increment()">+</button>
+        <button class="waves-effect waves-light btn" (click)="decrement()">-</button>
+    </p>
+</div>
+<router-outlet></router-outlet>
